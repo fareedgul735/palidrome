@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f7fb;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background: linear-gradient(135deg, #182848, #4b6cb7);
+        color: #fff;
+        padding: 1rem 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .palindrmContainer {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .palindrmBox {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        animation: fadeIn 0.6s ease-in-out;
+      }
+
+      .palindrmBox label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .palindrmBox input {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 0.3rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.3s;
+      }
+
+      .palindrmBox input:focus {
+        border: 1px solid #4b6cb7;
+      }
+
+      #error {
+        color: red;
+        font-size: 0.9rem;
+        align-self: flex-start; 
+        margin-left: 4px;
+        margin-bottom: 0.6rem;
+      }
+
+      .palindrmBox button {
+        background: #4b6cb7;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .palindrmBox button:hover {
+        background: #182848;
+      }
+
+      #outputPalindrome {
+        margin-top: 1rem;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      footer {
+        background: #182848;
+        color: #fff;
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        margin-top: auto;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>🔄 Palindrome Checker</header>
+
+    <div class="palindrmContainer">
+      <div class="palindrmBox">
+        <label>
+          <input
+            id="palindromeField"
+            type="text"
+            placeholder="Enter text to check palindrome"
+          />
+          <p id="error"></p>
+          <button id="covertText">Check</button>
+        </label>
+        <div id="outputPalindrome"></div>
+      </div>
+    </div>
+
+    <footer>© 2025 Palindrome App | All Rights Reserved</footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
